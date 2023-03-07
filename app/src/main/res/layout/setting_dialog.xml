@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/coustard"
+        android:text="Select mode:"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vertical" />
+
+        <RadioButton
+            android:id="@+id/horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horizontal" />
+
+        <RadioButton
+            android:id="@+id/grid_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grid Vertical" />
+
+        <RadioButton
+            android:id="@+id/grid_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grid Horizontal" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/spanCountEt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="numberSigned"
+        android:maxLength="1"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="2"
+        android:visibility="gone"
+        android:hint="Span count"
+        android:background="@null"
+      />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="Save" />
+
+</LinearLayout>
