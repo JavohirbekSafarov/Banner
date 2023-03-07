@@ -41,14 +41,15 @@ class MainActivity : AppCompatActivity() {
         editor = sharedPreferences.edit()
 
         lorem = LoremIpsum.getInstance()
+        binding.swipeRefresh.setOnRefreshListener {
+            binding.swipeRefresh.isRefreshing = false
+            initList()
+            initAdapter()
+        }
 
         initList()
         initValues()
         initAdapter()
-
-       /* val linearLayoutManager = LinearLayoutManager(this, orientation, false)
-        binding.myRecycler.layoutManager = linearLayoutManager
-        binding.myRecycler.adapter = adapter*/
 
     }
 
@@ -134,7 +135,9 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun initList() {
+        myList.clear()
         for (i in 0..50) {
+
             myList.add(
                 MyItem(
                     "https://picsum.photos/id/${Random().nextInt(200)}/200",
